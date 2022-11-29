@@ -197,7 +197,7 @@ button {
 }
 .contact {
     /* border: 2px solid red; */
-    width: 1200px;
+    width: 100%;
     
     
 }
@@ -255,6 +255,9 @@ button {
     position: relative;
     bottom: 130px;
 }
+iframe {
+    width: 100%;
+}
 
 /* ***************************************************************************** */
 
@@ -266,7 +269,7 @@ button {
 }
 .form{
     /* border: 1px solid green; */
-    width: 1200px;
+    width: 100%;
     padding: 20px;
 }
 form > input {
@@ -287,12 +290,13 @@ form > textarea {
 /* Footer style */
 .footer {
     /* border: 1px solid red; */
-    width: 1200px;
+    width: 100%;
     height: 100px;
     background-color: black;
-    display: flex;
+    /* display: flex; */
 }
 .footer ul li {
+    align-items: center;
     color: white;
     list-style-type: none;
     display: inline;
@@ -309,6 +313,697 @@ form > textarea {
 .footer>span {
     color: white;
     position: relative;
-    top: 80px;
+    top: 50px;
+    left: 550px;
+}
+ /***************************************/
+ /* TABLET */
+@media all and (max-width: 768px) { 
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .container{
+        width: 768px;
+        /* height: 100vh; */
+        border: 1px solid black;
+        margin: 0 auto;
+    }
+
+    /* HEADER STYLE */
+.header {
+    /* border: 1px solid red; */
+    background-image: url(./images/banner3.jpg);
+    height: 820px;
+    margin-bottom: 20px;
+    
+}
+.navigacija a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    float: right;
+    padding: 10px;
+}
+.logo {
+    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+    color: white;
+    /* margin-top: 20px; */
+    float: left;
+    font-size: 30px;
+    
+}
+.logo span {
+    color: orange;
+    border-left: 3px solid orange;
+    border-top: 3px solid orange; ;
+    border-bottom: 3px solid orange;
+    padding: 8px;
+    
+}
+.centriraj {
+
+    display: block;
+    /* direction: column; */
+    
+    /* justify-items: center; */
+    /* align-items: center; */
+    position: relative;
+    /* left: 20px; */
+    top: 400px;
+
+    
+}
+.centriraj p {
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    
+
+}
+button {
+    background-color: blue;
+    color: white;
+    /* font-size: 20px; */
+    padding: 5px;
+    position: relative;
+    left: 300px;
+    border-radius: 15px;
+    border: none;
+    height: 40px;
+    width: 130px;
+    
+}
+
+
+/* ********************************************************************************** */
+
+.section{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    /* border: 1px solid green; */
+    padding-bottom: 30px;
+}
+.naslov h1 {
+    display: inline-block;
+    position: relative;
+    left: 280px;
+    padding-bottom: 35px;
+    
+}
+.underline{
+    position: relative;
     left: 100px;
+    top: 25px;
+}
+.underline1 {
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+.first,
+.image {
+    display: flex;
+    flex-direction: row;
+    /* border: 2px dotted purple; */
+    /* flex-wrap: wrap; */
+    width: 330px;
+    height: 300px;
+    padding-right: 20px;
+    padding-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+.second {
+    display: inline-block;
+    width: 760px;
+    padding-left: 30px;
+}
+.first ul li,
+.second ul li{
+     list-style-type: circle;
+     padding: 10px;
+    text-align: left;
+    list-style-image: url(./images/arrow_bullet.png);
+}
+.first > h3,
+.second > h3 {
+    color: blue;
+    padding-bottom: 10px;
+}
+
+
+/* ********************************************************** */
+/* CARDS style */
+.cards {
+    display: inline-block;
+    
+    /* border: 1px solid green; */
+    background-color: white;
+}
+.card {
+    /* border: 2px dotted purple; */
+   
+    height: 280px;
+    background-color: lightblue;
+
+    
+    margin: 20px;
+   padding: 20px;
+   font-size: 20px;
+   font-weight: bold;
+}
+.card1, 
+.card2 {
+    display: inline-block;
+    width: 340px
+}
+.card3{
+    display: inline-block;
+    width: 340px
+}
+.card img {
+    border-radius: 100px;
+}
+.card > 
+.paragraf{
+    font-size: 15px;
+    color: white;
+    /* padding-top: 5px; */
+    position: relative;
+    bottom: 40px;
+}
+.card >
+.ime {
+    position: relative;
+    left: 70px;
+    bottom: 60px;
+    font-size: 16px;
+}
+.stars {
+    color: white;
+    position: relative;
+    left: 70px;
+    bottom: 60px;
+}
+
+/* ************************************************************ */
+/* CONTACT */
+
+.underline2 {
+    position: relative;
+    left: 10px;
+    top: 30px;
+    padding-top: 30px;
+
+    
+}
+.contact {
+    /* border: 2px solid red; */
+    max-width: 768px;
+    
+    
+}
+.socials,
+.connect {
+    display: grid;
+    border: 1px dashed blue;
+    grid-template-columns: 1fr 1fr;
+    width: 380px;
+    height: 200px;
+}
+
+.connect > h2 {
+    color: white;
+    position: relative;
+    left: 40px;
+    top: 20px;
+    
+}
+
+.green :nth-child(2) {
+    display: block;
+    position: relative;
+    top: 60px;
+    left: -100px;
+    
+}
+.green :nth-child(3) {
+    display: block;
+    position: relative;
+    top: 100px;
+    left: -120px;
+    
+}
+.green > p {
+    color: white;
+    display: block;
+    position: relative;
+    top: 80px;
+}
+
+.img-socials,
+.blue>img {
+    display: flex;
+    position: relative;
+    top: 80px;
+    gap: 15px;
+    left: -80px;
+}
+.socials {
+    position: relative;
+    top: 30px;
+    z-index: 1;
+}
+.map {
+    position: relative;
+    bottom: 130px;
+    /* width: fit-content; */
+}
+
+/* ***************************************************************************** */
+
+.underline3 {
+    position: relative;
+    left: 90px;
+    top: 30px;
+    padding-top: 30px;
+}
+.form{
+    /* border: 1px solid green; */
+    width: 100%;
+    padding: 20px;
+}
+form > input {
+    display: inline-block;
+    width: 210px;
+    height: 50px;
+    margin-right: 10px;
+}
+form > textarea {
+    width: 100%;
+   
+    
+}
+#blueButt{
+    background-color: orange;
+
+}
+
+/* Footer style */
+.footer {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    /* display: flex; */
+}
+.footer ul li {
+    align-items: center;
+    color: white;
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+    position: relative;
+    top: 40px;
+    left: 150px;
+    
+}
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+.footer>span {
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 300px;
+}
+
+
+}
+
+@media (max-width: 480px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .container{
+        width: 480px;
+        /* height: 100vh; */
+        border: 1px solid black;
+        margin: 0 auto;
+    }
+
+    /* HEADER STYLE */
+.header {
+    border: 1px solid red;
+    /* background-image: url(./images/banner3.jpg);
+
+    background-image: ;
+    height: 820px;
+    margin-bottom: 20px; */
+    background-image: none;
+    
+}
+.navigacija a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    /* float: right; */
+    padding: 10px;
+    background-color: aquamarine;
+    width: 100%;
+    height: 300px;
+    
+}
+.logo {
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+    color: black;
+    /* margin-top: 20px; */
+    float: left;
+    font-size: 70px;
+    
+}
+.logo span {
+    color: orange;
+    border-left: 3px solid orange;
+    border-top: 3px solid orange; ;
+    border-bottom: 3px solid orange;
+    padding: 8px;
+    
+}
+.centriraj {
+
+  
+    position: relative;
+    /* left: 20px; */
+    top: 400px;
+    background-image: url(./images/banner3.jpg);
+    width: 100%;
+
+    
+}
+.centriraj p {
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    
+
+}
+button {
+    background-color: blue;
+    color: white;
+    /* font-size: 20px; */
+    padding: 5px;
+    position: relative;
+    left: 300px;
+    border-radius: 15px;
+    border: none;
+    height: 40px;
+    width: 130px;
+    
+}
+
+
+/* ********************************************************************************** */
+
+.section{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    /* border: 1px solid green; */
+    padding-bottom: 30px;
+}
+.naslov h1 {
+    display: inline-block;
+    position: relative;
+    left: 280px;
+    padding-bottom: 35px;
+    
+}
+.underline{
+    position: relative;
+    left: 100px;
+    top: 25px;
+}
+.underline1 {
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+.first,
+.image {
+    display: flex;
+    flex-direction: row;
+    /* border: 2px dotted purple; */
+    /* flex-wrap: wrap; */
+    width: 330px;
+    height: 300px;
+    padding-right: 20px;
+    padding-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+.second {
+    display: inline-block;
+    width: 760px;
+    padding-left: 30px;
+}
+.first ul li,
+.second ul li{
+     list-style-type: circle;
+     padding: 10px;
+    text-align: left;
+    list-style-image: url(./images/arrow_bullet.png);
+}
+.first > h3,
+.second > h3 {
+    color: blue;
+    padding-bottom: 10px;
+}
+
+
+/* ********************************************************** */
+/* CARDS style */
+.cards {
+    display: inline-block;
+    
+    /* border: 1px solid green; */
+    background-color: white;
+}
+.card {
+    /* border: 2px dotted purple; */
+   
+    height: 280px;
+    background-color: lightblue;
+
+    
+    margin: 20px;
+   padding: 20px;
+   font-size: 20px;
+   font-weight: bold;
+}
+.card1, 
+.card2 {
+    display: inline-block;
+    width: 340px
+}
+.card3{
+    display: inline-block;
+    width: 340px
+}
+.card img {
+    border-radius: 100px;
+}
+.card > 
+.paragraf{
+    font-size: 15px;
+    color: white;
+    /* padding-top: 5px; */
+    position: relative;
+    bottom: 40px;
+}
+.card >
+.ime {
+    position: relative;
+    left: 70px;
+    bottom: 60px;
+    font-size: 16px;
+}
+.stars {
+    color: white;
+    position: relative;
+    left: 70px;
+    bottom: 60px;
+}
+
+/* ************************************************************ */
+/* CONTACT */
+
+.underline2 {
+    position: relative;
+    left: 10px;
+    top: 30px;
+    padding-top: 30px;
+
+    
+}
+.contact {
+    /* border: 2px solid red; */
+    max-width: 768px;
+    
+    
+}
+.socials,
+.connect {
+    display: grid;
+    border: 1px dashed blue;
+    grid-template-columns: 1fr 1fr;
+    width: 380px;
+    height: 200px;
+}
+
+.connect > h2 {
+    color: white;
+    position: relative;
+    left: 40px;
+    top: 20px;
+    
+}
+
+.green :nth-child(2) {
+    display: block;
+    position: relative;
+    top: 60px;
+    left: -100px;
+    
+}
+.green :nth-child(3) {
+    display: block;
+    position: relative;
+    top: 100px;
+    left: -120px;
+    
+}
+.green > p {
+    color: white;
+    display: block;
+    position: relative;
+    top: 80px;
+}
+
+.img-socials,
+.blue>img {
+    display: flex;
+    position: relative;
+    top: 80px;
+    gap: 15px;
+    left: -80px;
+}
+.socials {
+    position: relative;
+    top: 30px;
+    z-index: 1;
+}
+.map {
+    position: relative;
+    bottom: 130px;
+    /* width: fit-content; */
+}
+
+/* ***************************************************************************** */
+
+.underline3 {
+    position: relative;
+    left: 90px;
+    top: 30px;
+    padding-top: 30px;
+}
+.form{
+    /* border: 1px solid green; */
+    width: 100%;
+    padding: 20px;
+}
+form > input {
+    display: inline-block;
+    width: 210px;
+    height: 50px;
+    margin-right: 10px;
+}
+form > textarea {
+    width: 100%;
+   
+    
+}
+#blueButt{
+    background-color: orange;
+
+}
+
+/* Footer style */
+.footer {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    /* display: flex; */
+}
+.footer ul li {
+    align-items: center;
+    color: white;
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+    position: relative;
+    top: 40px;
+    left: 150px;
+    
+}
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+.footer>span {
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 300px;
+}
+
 }

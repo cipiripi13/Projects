@@ -1,0 +1,252 @@
+@import 'variables';
+@import 'mixins.scss';
+
+/*******************************************************/
+/*HEADER STYLE*/  
+header {
+    background-color: black;
+    color: $whiteText;
+    height: 100px;
+    text-transform: uppercase;
+    
+}
+
+header nav .nav-link {
+    color: $whiteText;
+}
+span {
+    position: relative;
+    top: 35px;
+    padding: 5px;
+}
+
+/**********************************************************/
+/*Hamburger meni*/
+/* Hamaburger meni */
+.hamburger {
+    display: none;   /* ovako se ne prikazuje i onda se ceo meni pomera u desnu stranu*/
+    cursor: pointer;
+}
+
+/* Pravimo linijice unutra hamburgera u spanu sa klasom bar */
+
+.bar{
+    position: relative;
+    left: 300px;
+    top: -2px;
+    display: block;
+    width: 35px;
+    /*dajemo sirinu linja tj.debljinu*/
+    height: 5px;  /*kako linije ne bi bile previse blizu, odvajamo ih i marginama gore i dole*/
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* Zatim dodajemo media query za velicinu ekrana na kojoj zelimo da se prikaze */
+
+@media(max-width: 992px){
+    .hamburger{
+        display: block; /*od 768px pocinje da se prikazuje*/
+    }
+
+    /*zatim pravimo animaciju da se prikaze X kada zelimo da zatvorimo nas meni*/
+    /* gornja i donja linija idu u x dok u sreidini nestaje */
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(5px) rotate(35deg) ;
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-5px) rotate(-35deg) ;
+    }
+    /* Zatim kreiramo podesavanja da se stavke unutar menija ne prikazuju nego da se na hover kod tri linija prikazu */
+    .nav-menu{
+        position: fixed; /*meni ostaje fiksiran na ekranu dok ga ne iskljucimo*/
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 50%; /*zauzima citavu sirinu ekrana*/
+        text-align: center;
+        transition: 0.3s;
+        
+    }
+    .nav-item{
+        margin: 12px 0; /*margina da odvoji elemente unutar liste*/
+    } 
+    /* kada aktiviramo meni zelimo da se nas meni prikaze */
+    /* aktiviramo meni u js */
+    .nav-menu.active{
+        left: 0;
+    }
+}  
+
+/***********************************************************/
+/*fIRST BLUE SECTION STYLE*/  
+section {
+    background-color: $blueBcground;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+h1, h5 {
+   color: $whiteText;
+}
+}
+.firstP{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: bold;
+
+}
+h5{
+    margin-bottom: $margin;
+}
+.first img {
+    margin-top:  $margin;
+
+}
+
+
+/*******************************************************************/
+/*IMAGES ---- 3.SECTION*/  
+.images{
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 300px;
+    
+    }
+}
+
+.headingThree{
+    display: flex;
+    justify-content: center;
+    margin-top:  $margin;
+    margin-bottom:  $margin;
+    text-transform: uppercase;
+   
+}
+
+.about-heading{
+    background-color: $blueBcground;
+    margin-top: $margin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    color: $whiteText;
+    
+
+    
+}
+.about
+{
+    background-color: $blueBcground;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    color: $whiteText;
+    height: 160px;
+    
+    
+}
+
+.prvi {
+    margin-right: 20px;
+    text-align: justify;
+}
+.between{
+    height: 50px;
+    background-color: $blueBcground;
+}
+.contact-section {
+    display: flex;
+    justify-content: center;
+    margin-top:  $margin;
+    margin-bottom:  $margin;
+}
+.justify-content-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $margin;
+    
+}
+
+.div-footer{
+    background-color: black;
+    color: $whiteText;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px; 
+    
+}
+.center {
+    position: relative;
+    left: 30px;
+}
+
+.footer div {
+    width: 300px;
+}
+.icons {
+    
+    position: relative;
+    left: 45px;
+    padding: 10px;
+}
+.icons svg {
+    padding-right: 2px;
+    
+}
+
+.border {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    // height: 4px;
+    width: 120px;
+    border-top: 1px solid white;
+}
+.bi{
+    z-index: 1;
+    position: relative;
+    bottom: 10px;
+}
+.border-portfolio {
+    width: 28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.border-portfolio .line{
+    width: 120px;
+    border-top: 1px solid rgb(12, 11, 11);
+    position: relative;
+    left: 380px;
+}
+.border-portfolio > .bi{
+    z-index: 3;
+    position: relative;
+    bottom: 10px;
+}

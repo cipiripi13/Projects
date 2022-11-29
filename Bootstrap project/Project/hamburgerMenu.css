@@ -1,0 +1,118 @@
+/* Opsta podesavanja */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(17, 16, 16);
+}
+ul li {
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+/* Podesavnja logoa */
+nav > a {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+    
+}
+
+
+/* Klasa u kojoj se nalazi navigacija-roditeljska klasa */
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+/* Meni */
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    gap: 60px;
+}
+
+
+
+/* Link unutar navigacije */
+.navlink{
+    transition: 0.7s ease;
+}
+.navlink:hover{
+    color: dodgerblue;
+}
+
+
+/* Hamaburger meni */
+.hamburger {
+    display: none;   /* ovako se ne prikazuje i onda se ceo meni pomera u desnu stranu*/
+    cursor: pointer;
+}
+
+/* Pravimo linijice unutra hamburgera u spanu sa klasom bar */
+
+.bar{
+    display: block;
+    width: 25px;
+    /*dajemo sirinu linja tj.debljinu*/
+    height: 5px;  /*kako linije ne bi bile previse blizu, odvajamo ih i marginama gore i dole*/
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* Zatim dodajemo media query za velicinu ekrana na kojoj zelimo da se prikaze */
+
+@media(max-width: 768px){
+    .hamburger{
+        display: block; /*od 768px pocinje da se prikazuje*/
+    }
+
+    /*zatim pravimo animaciju da se prikaze X kada zelimo da zatvorimo nas meni*/
+    /* gornja i donja linija idu u x dok u sreidini nestaje */
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg) ;
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg) ;
+    }
+    /* Zatim kreiramo podesavanja da se stavke unutar menija ne prikazuju nego da se na hover kod tri linija prikazu */
+    .nav-menu{
+        position: fixed; /*meni ostaje fiksiran na ekranu dok ga ne iskljucimo*/
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%; /*zauzima citavu sirinu ekrana*/
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 16px 0; /*margina da odvoji elemente unutar liste*/
+    } 
+    /* kada aktiviramo meni zelimo da se nas meni prikaze */
+    /* aktiviramo meni u js */
+    .nav-menu.active{
+        left: 0;
+    }
+}
