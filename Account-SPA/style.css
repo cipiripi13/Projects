@@ -1,0 +1,6 @@
+
+/* Nad inputom u dr delu za add accounts dodajemo da ne zelimo da se prikaze
+i da ce se prikazati pod odg okolnostima---  a to je kada kliknemo na link add acoount */
+#add-accounts-view{
+  display: none;
+}
