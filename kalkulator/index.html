@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator</title>
+</head>
+<style>
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 2px solid black;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+<body>
+  
+  <form>
+    <label>Enter your first number</label>
+    <br>
+    <input type="text" name="" id="num1" value="0">
+    <br><br>
+
+    <label">Enter your second number</label>
+    <br>
+    <input type="text" name="" id="num2" value="0">
+    <br><br>
+    <!-- Svima postavljamo istu vrednos u name atribut kako bi nam dozvolio da samo jedno cekiramo -->
+    <input type="radio" name="cd" value="+">+
+    <input type="radio" name="cd" value="-">-
+    <input type="radio" name="cd" value="*">*
+    <input type="radio" name="cd" value="/">/
+    <br><br>
+    <input type="submit" value="Izracunaj">
+
+
+  </form>
+  <p id="res"></p>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
