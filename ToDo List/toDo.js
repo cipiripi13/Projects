@@ -4,6 +4,9 @@ console.log('To do list');
 let ullistTasks = document.querySelector('ul');
 //console.log(ullistTasks);
 
+let liAllTasks = document.querySelectorAll('li');
+console.log(liAllTasks);
+
 let inputTask = document.getElementById('enterData');
 let addTaskBeggining = document.getElementById('addBegginig');
 let addTaskEnd = document.getElementById('addAtEnd');
@@ -39,3 +42,24 @@ buttonAdd.addEventListener('click', function(event){
   //here we empty what we have entered
   inputTask.value = '';
 })
+
+
+//dodajemo da cela lista regauje na dogadjaj
+//da kada kliknemo na li taj isti se obrise iz liste
+//i u konzoli ispisemo sta smo obrisali
+ullistTasks.addEventListener('click', (event) => {
+  // console.log(event);
+  // console.log('kliknuto na UL');
+  console.log(event.target.nodeName);
+  if(event.target.nodeName == 'LI'){
+    event.target.remove()
+    //console.log('kliknuto na LI');
+    console.log(event.target.innerHTML);  }
+})
+
+//primer
+// event bubbling
+//kliktanje na jedan od elem htmla odrazava se na ceo dokument i ide od roditelja do roditelja dok na kraju ne stigne do document u domu
+// document.querySelector('body').addEventListener('click', (event) => {
+//   console.log('kliknuli smo na body');
+// })
